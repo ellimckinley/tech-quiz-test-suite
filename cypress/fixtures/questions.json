@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Which meat is traditionally used in tacos al pastor?",
+    "answers": ["Beef", "Chicken", "Pork", "Lamb"],
+    "correctAnswer": "Pork"
+  },
+  {
+    "question": "What type of tortilla is commonly used for street tacos in Mexico?",
+    "answers": ["Flour", "Corn", "Whole Wheat", "Spinach"],
+    "correctAnswer": "Corn"
+  },
+  {
+    "question": "Which ingredient is essential in making guacamole?",
+    "answers": ["Tomato", "Avocado", "Cilantro", "Lime"],
+    "correctAnswer": "Avocado"
+  },
+  {
+    "question": "What are tacos dorados also known as?",
+    "answers": ["Soft tacos", "Rolled tacos", "Hard shell tacos", "Fried tacos"],
+    "correctAnswer": "Fried tacos"
+  },
+  {
+    "question": "Which cheese is most commonly sprinkled on traditional Mexican tacos?",
+    "answers": ["Cheddar", "Queso fresco", "Mozzarella", "Swiss"],
+    "correctAnswer": "Queso fresco"
+  },
+  {
+    "question": "Which of the following is a popular taco topping made from pickled vegetables?",
+    "answers": ["Salsa verde", "Pico de gallo", "Curtido", "Mole"],
+    "correctAnswer": "Curtido"
+  },
+  {
+    "question": "What is the name of the double tortilla taco style often found in Mexico?",
+    "answers": ["Gringa", "Volcán", "Doble", "Campechano"],
+    "correctAnswer": "Campechano"
+  },
+  {
+    "question": "Which taco filling is made from cow tongue?",
+    "answers": ["Barbacoa", "Carnitas", "Lengua", "Cabeza"],
+    "correctAnswer": "Lengua"
+  },
+  {
+    "question": "Which taco style involves meat cooked in a pit with maguey leaves?",
+    "answers": ["Carnitas", "Barbacoa", "Carne asada", "Alambre"],
+    "correctAnswer": "Barbacoa"
+  },
+  {
+    "question": "Which popular taco accompaniment is made with tomatoes, onions, and cilantro?",
+    "answers": ["Salsa roja", "Pico de gallo", "Crema", "Guajillo sauce"],
+    "correctAnswer": "Pico de gallo"
+  }
+]

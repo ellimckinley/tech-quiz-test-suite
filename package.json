@@ -13,13 +13,17 @@
     "client:dev": "cd client && npm run dev",
     "build": "cd server && npm run build",
     "seed": "cd server && npm run seed",
-    "render-build": "npm install && npm run build"
+    "render-build": "npm install && npm run build",
+    "test": "cypress open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/react": "^18.3.3",
+    "@types/express": "^5.0.1",
+    "@types/mongoose": "^5.11.96",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.3.1",
     "concurrently": "^8.2.2",
     "cypress": "^13.17.0",
@@ -30,5 +34,10 @@
     "typescript": "^5.5.3",
     "vitest": "^2.0.3",
     "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "dotenv": "^16.5.0",
+    "mongoose": "^8.14.1"
   }
 }

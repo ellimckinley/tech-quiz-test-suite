@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["cypress"],
+    "jsx": "react-jsx",  
+    "noEmit": true
+  },
+  "include": [
+    "./**/*.cy.ts",
+    "./**/*.cy.tsx"
+  ]
+}
