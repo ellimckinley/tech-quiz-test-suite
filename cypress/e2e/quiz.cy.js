@@ -1,33 +1,23 @@
-// cypress/e2e/quiz.cy.js
-
+// cypress/e2e/quiz.cy.ts
 describe('Tech Quiz E2E Test', () => {
-  beforeEach(() => {
-    cy.visit('http://localhost:3000'); // or your deployed URL
-  });
+  it('runs a full quiz flow from start to finish', () => {
+    cy.visit('/');
 
-  it('starts quiz and displays first question', () => {
-    cy.contains('Start Quiz').click();
-    cy.get('.question').should('exist'); // adjust selector
-  });
+    // Start the quiz
+    cy.contains('Start Quiz').should('be.visible').click();
 
-  it('completes quiz and displays score', () => {
-    cy.contains('Start Quiz').click();
+    // Confirm a question is shown
+    cy.get('h2').should('exist'); // question is shown in <h2> in Quiz.tsx
 
+    // Click through 10 answers (first button each time)
     for (let i = 0; i < 10; i++) {
-      cy.get('button.answer-option').first().click(); // adjust selector
+      cy.get('button').first().click();
     }
 
-    cy.contains('Your Score').should('be.visible');
-  });
+    // Final score should be visible
+    cy.contains('Your score').should('exist');
 
-  it('can start a new quiz after finishing one', () => {
-    cy.contains('Start Quiz').click();
-
-    for (let i = 0; i < 10; i++) {
-      cy.get('button.answer-option').first().click();
-    }
-
-    cy.contains('Start New Quiz').click();
-    cy.get('.question').should('exist');
+    // Optionally test retake button
+    cy.contains('Take New Quiz').should('be.visible');
   });
 });

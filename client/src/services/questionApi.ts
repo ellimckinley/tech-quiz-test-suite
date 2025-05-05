@@ -1,6 +1,7 @@
 import type { Question } from '../models/Question.js';
 
 export const getQuestions = async (): Promise<Question[]> => {
+  console.log('[DEBUG] Fetching questions...');
   try {
     const response = await fetch('/api/questions/random');
     if (!response.ok) {

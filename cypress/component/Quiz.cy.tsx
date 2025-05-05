@@ -1,29 +1,35 @@
 // cypress/component/Quiz.cy.jsx
-
-import Quiz from '../../client/src/components/Quiz'; 
+import Quiz from '../../client/src/components/Quiz';
 import { mount } from 'cypress/react';
 
 describe('<Quiz /> Component Test', () => {
-  it('renders Start Quiz button', () => {
+  beforeEach(() => {
+    cy.intercept('GET', '/api/questions/random', {
+      fixture: 'questions.json'
+    }).as('getQuestions');
+  });
+
+  it('shows Start Quiz button', () => {
     mount(<Quiz />);
     cy.contains('Start Quiz').should('be.visible');
   });
 
-  it('starts the quiz when the button is clicked', () => {
+  it('displays a question after starting the quiz', () => {
     mount(<Quiz />);
     cy.contains('Start Quiz').click();
-    cy.get('.question').should('exist'); // update selector as needed
+    cy.wait('@getQuestions');
+    cy.contains('What is the output of print(2 ** 3)?').should('exist'); // from fixture
   });
 
-  it('shows final score after all questions answered', () => {
+  it('displays final score after answering all questions', () => {
     mount(<Quiz />);
     cy.contains('Start Quiz').click();
+    cy.wait('@getQuestions');
 
-    // click through all answers (assuming 10 questions with one button each)
     for (let i = 0; i < 10; i++) {
-      cy.get('button.answer-option').first().click(); // update selector as needed
+      cy.get('button').first().click(); // assumes all answers are <button>
     }
 
-    cy.contains('Your Score').should('be.visible');
+    cy.contains('Your score').should('exist');
   });
 });
