@@ -1,8 +1,8 @@
 # Tech Quiz Application
 
-Test your knowledge with this interactive Tech Quiz! This full-stack MERN application presents users with ten random tech-related questions and provides a final score upon completion.
+This full-stack MERN Tech Quiz application was provided as a fully functional starter codebase by the DU Coding Bootcamp course. It allows users to take a quiz of ten random tech-related questions and view their final score upon completion.
 
-This version of the app includes comprehensive **Cypress tests** for both component and end-to-end functionality, ensuring robust and reliable performance.
+For this project, I focused on enhancing the application’s reliability by creating a comprehensive suite of **Cypress tests**, including both component and end-to-end coverage. These tests ensure the app performs as expected and maintains robustness across user interactions.
 
 ---
 
@@ -18,7 +18,7 @@ This version of the app includes comprehensive **Cypress tests** for both compon
 
 ## 🎥 Walkthrough Video
 
-[🔗 Click here to watch the walkthrough demo](https://your-walkthrough-link.com)
+[🔗 Click here to watch the walkthrough demo](https://drive.google.com/file/d/1NqPwqdF9z8SYh7NuxIHIpIq1EIT6kCVy/view)
 
 This video demonstrates:
 
@@ -41,11 +41,13 @@ This video demonstrates:
    npm install
    ```
 3. Set your environment:
+
    - Rename .env.example to .env
    - Add any required variables like PORT, MONGO_URI, etc.
+
 4. Start the app:
    ```bash
-   npm start
+   npm start:dev
    ```
 5. Run tests:
    ```bash
