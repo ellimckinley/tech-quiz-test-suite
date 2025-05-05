@@ -1,11 +1,13 @@
 // cypress/e2e/quiz.cy.ts
 describe('Tech Quiz E2E Test', () => {
   it('runs a full quiz flow from start to finish', () => {
+    cy.intercept('GET', '/api/questions/random').as('getQuestions');
     cy.visit('/');
 
     // Start the quiz
     cy.contains('Start Quiz').should('be.visible').click();
 
+    cy.wait('@getQuestions');
     // Confirm a question is shown
     cy.get('h2').should('exist'); // question is shown in <h2> in Quiz.tsx
 

@@ -26,10 +26,14 @@ describe('<Quiz /> Component Test', () => {
     cy.contains('Start Quiz').click();
     cy.wait('@getQuestions');
 
-    for (let i = 0; i < 10; i++) {
-      cy.get('button').first().click(); // assumes all answers are <button>
-    }
+  cy.fixture('questions.json').then((questions) => {
+    Cypress._.times(questions.length, () => {
+      cy.get('button').first().click();
+    });
 
     cy.contains('Your score').should('exist');
+  });
+
+    cy.contains('Your score:').should('exist');
   });
 });

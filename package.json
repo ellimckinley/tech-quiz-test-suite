@@ -20,6 +20,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/react": "^9.0.1",
+    "@cypress/vite-dev-server": "^6.0.3",
     "@types/express": "^5.0.1",
     "@types/mongoose": "^5.11.96",
     "@types/react": "^18.3.20",
